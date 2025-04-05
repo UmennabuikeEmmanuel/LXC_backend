@@ -40,6 +40,6 @@ app.get('/', (req, res) => {
 const PORT = process.env.PORT || 8000;
 const IP_ADDRESS = '0.0.0.0';
 const IP_LOCAL = 'localhost';
-server.listen(Number(PORT), IP_LOCAL, () => {
+server.listen(PORT, IP_LOCAL, () => {
     console.log(`Server is running on http://${IP_LOCAL}:${PORT}`);
 });
