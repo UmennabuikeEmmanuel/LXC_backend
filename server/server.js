@@ -38,7 +38,7 @@ app.get('/', (req, res) => {
     res.send('Welcome to Lispendes enugu This is a platform that will provide access to the legal status of landed property/ies in Anambra State, Nigeria for interested buyers to have sufficient information on the legal standing of property/ies they have interest in purchasing or/and renting. Find the documentation here for backend api: [https://documenter.getpostman.com/view/18112964/2s9YyqjNJN]');
 });
 const PORT = process.env.PORT || 8000;
-const IP_ADDRESS = '44.226.145.213';
+const IP_ADDRESS = '0.0.0.0';
 const IP_LOCAL = 'localhost';
 server.listen(Number(PORT), IP_LOCAL, () => {
     console.log(`Server is running on http://${IP_LOCAL}:${PORT}`);
