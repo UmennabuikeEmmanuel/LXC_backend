@@ -1,0 +1,30 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const authentication_1 = __importDefault(require("./authentication"));
+const users_1 = __importDefault(require("./users"));
+const cases_1 = __importDefault(require("./cases"));
+const guest_1 = __importDefault(require("./guest"));
+const flags_1 = __importDefault(require("./flags"));
+const settings_1 = __importDefault(require("./settings"));
+const activityLog_1 = __importDefault(require("./activityLog"));
+const dataReport_1 = __importDefault(require("./dataReport"));
+const dashboard_1 = __importDefault(require("./dashboard"));
+const payment_1 = __importDefault(require("./payment"));
+const router = express_1.default.Router();
+exports.default = () => {
+    (0, authentication_1.default)(router);
+    (0, users_1.default)(router);
+    (0, cases_1.default)(router);
+    (0, guest_1.default)(router);
+    (0, flags_1.default)(router);
+    (0, settings_1.default)(router);
+    (0, activityLog_1.default)(router);
+    (0, dataReport_1.default)(router);
+    (0, dashboard_1.default)(router);
+    (0, payment_1.default)(router);
+    return router;
+};
