@@ -8,6 +8,7 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 try {
+    mongoose_1.set('strictQuery', false);
     exports.db = mongoose_1.default.connection;
 }
 catch (error) {
