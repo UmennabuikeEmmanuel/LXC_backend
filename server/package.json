@@ -2,12 +2,12 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "server.ts",
+  "main": "server.js",
   "scripts": {
     "build": "npx tsc",
     "build:dev": "env-cmd -f .env.development npx tsc",
     "start": "node server.js",
-    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/server.js\""
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q server.js\""
   },
   "keywords": [],
   "author": "",
