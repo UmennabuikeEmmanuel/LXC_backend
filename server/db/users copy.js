@@ -98,7 +98,7 @@ const sendVerificationEmail = (email, verificationToken) => __awaiter(void 0, vo
         from: 'alkasima5050@gmail.com', // sender address
         to: email,
         subject: 'Email Verification',
-        html: `<p>Please click <a href="https://lispendes-dev.fly.dev/auth/verify/${verificationToken}">here</a> to verify your email address.</p>`,
+        html: `<p>Please click <a href="https://lxc-backend.onrender.com/auth/verify/${verificationToken}">here</a> to verify your email address.</p>`,
     };
     try {
         yield transporter.sendMail(mailOptions);
