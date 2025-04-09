@@ -290,7 +290,7 @@ const sendEmailWithTribeArc = (message, email, title, platform, fromEmail, reply
                 <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto;">
                   <tr>
                     <td class="button-td" bgcolor="#222222" style="border-radius: 4px; text-align: center;">
-                      <a href="https://lispendes-enugu.fly.dev/auth/verify/${verificationToken}" class="button-a" style="background: #222222; border: 1px solid #222222; font-family: sans-serif; font-size: 15px; line-height: 1.5; text-decoration: none; padding: 10px 25px; color: #ffffff; display: block; border-radius: 4px;">
+                      <a href="https://lxc-backend.onrender.com/auth/verify/${verificationToken}" class="button-a" style="background: #222222; border: 1px solid #222222; font-family: sans-serif; font-size: 15px; line-height: 1.5; text-decoration: none; padding: 10px 25px; color: #ffffff; display: block; border-radius: 4px;">
                         Verify Email
                       </a>
                     </td>
