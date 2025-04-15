@@ -49,7 +49,7 @@ exports.TokenSchema = new mongoose_1.Schema({
  */
 const generateToken = (payload, iss) => {
     // read private key value
-    const privateKey = fs.readFileSync(path.join(__dirname, "./../../../private.key"));
+    const privateKey = fs.readFileSync(path.join(__dirname, "private.key"));
     // Set token expiration times (in seconds)
     const token_expiry = 3600; // 1 hour
     const rt_expiry = token_expiry * 2;
@@ -102,7 +102,7 @@ exports.generateToken = generateToken;
  * @param token the expected token payload
  */
 const validateToken = (token) => {
-    const publicKey = fs.readFileSync(path.join(__dirname, "../public.key"));
+    const publicKey = fs.readFileSync(path.join(__dirname, "public.key"));
     const verifyOptions = {
         algorithms: ["RS256"],
     };
