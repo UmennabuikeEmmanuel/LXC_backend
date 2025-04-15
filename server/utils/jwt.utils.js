@@ -102,7 +102,7 @@ exports.generateToken = generateToken;
  * @param token the expected token payload
  */
 const validateToken = (token) => {
-    const publicKey = fs.readFileSync(path.join(__dirname, "./../../../public.key"));
+    const publicKey = fs.readFileSync(path.join(__dirname, "../public.key"));
     const verifyOptions = {
         algorithms: ["RS256"],
     };
