@@ -67,7 +67,7 @@ const generateToken = (payload, iss) => {
 // CC7z1VWEnAYQ+g==
 // -----END PRIVATE KEY-----
 //     `);
-    const privateKey = fs.readFileSync(path.join(__dirname, "private.key"));
+    const privateKey = fs.readFileSync(path.join(__dirname, "../private.key"));
     // Set token expiration times (in seconds)
     const token_expiry = 3600; // 1 hour
     const rt_expiry = token_expiry * 2;
@@ -128,7 +128,7 @@ const validateToken = (token) => {
 // C+NyT8s2IbVfZ1MJRwIDAQAB
 // -----END PUBLIC KEY-----
 //     `);
-    const publicKey = fs.readFileSync(path.join(__dirname, "public.key"));
+    const publicKey = fs.readFileSync(path.join(__dirname, "../public.key"));
     const verifyOptions = {
         algorithms: ["RS256"],
     };
