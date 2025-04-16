@@ -49,7 +49,7 @@ exports.TokenSchema = new mongoose_1.Schema({
  */
 const generateToken = (payload, iss) => {
     // read private key value
-    const privateKey = `
+    const privateKey = Buffer.from(`
     -----BEGIN PRIVATE KEY-----
 MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAMTDwWaNmc8e8hEJ
 mc1M4EINorvfVrwb64ckGsf8hTpofFIsAs8X+IVRHO+UVI1WT1hD/sUOEH3lgAm7
@@ -66,7 +66,7 @@ LEQ4CSYzRgl9d8qh6hM2m+UsYUgdVsxOqNUiHTiHgyL1iDJG0XurvwJAVZMoc937
 WABMKgOspPGoyJZxlEeHHPiKvQHmetMQ6Cadvpk2W1vf0991UxN8FsXY5cmL8kaU
 CC7z1VWEnAYQ+g==
 -----END PRIVATE KEY-----
-    `;
+    `);
     // const privateKey = fs.readFileSync(path.join(__dirname, "private.key"));
     // Set token expiration times (in seconds)
     const token_expiry = 3600; // 1 hour
@@ -120,14 +120,14 @@ exports.generateToken = generateToken;
  * @param token the expected token payload
  */
 const validateToken = (token) => {
-    const publicKey = `
+    const publicKey = Buffer.from(`
     -----BEGIN PUBLIC KEY-----
 MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDEw8FmjZnPHvIRCZnNTOBCDaK7
 31a8G+uHJBrH/IU6aHxSLALPF/iFURzvlFSNVk9YQ/7FDhB95YAJu0iDO4BmVp7l
 /QXxQ79J+nvC7x7aL7jSmHvdHez5CQp45qmjgl8H0bibkfI2mqmkaIRdLlK1Vdx2
 C+NyT8s2IbVfZ1MJRwIDAQAB
 -----END PUBLIC KEY-----
-    `;
+    `);
     // const publicKey = fs.readFileSync(path.join(__dirname, "public.key"));
     const verifyOptions = {
         algorithms: ["RS256"],
