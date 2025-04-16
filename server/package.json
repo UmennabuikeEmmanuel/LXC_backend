@@ -4,40 +4,18 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "build": "npx tsc",
-    "build:dev": "env-cmd -f .env.development npx tsc",
+    "build": "cp server/public.key dist/public.key && cp server/private.key dist/private.key",
     "start": "node server.js",
-    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q server.js\""
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@types/bcrypt": "^5.0.0",
-    "@types/compression": "^1.7.5",
-    "@types/cookie-parser": "^1.4.6",
-    "@types/cors": "^2.8.17",
-    "@types/express": "^4.17.13",
-    "@types/jsonwebtoken": "^8.5.9",
-    "@types/lodash": "^4.14.202",
-    "@types/mongoose": "^5.11.97",
-    "@types/multer": "^1.4.11",
-    "@types/node": "^18.7.14",
-    "@types/nodemailer": "^6.4.14",
-    "@types/pdfkit": "^0.13.4",
-    "@types/streamifier": "^0.1.2",
-    "@types/uuid": "^9.0.8",
-    "@typescript-eslint/eslint-plugin": "^5.36.1",
-    "@typescript-eslint/parser": "^5.36.1",
-    "eslint": "^8.23.0",
-    "nodemon": "^3.1.9"
-  },
   "dependencies": {
     "axios": "^1.6.8",
     "bcrypt": "^5.0.1",
     "cloudinary": "^2.0.2",
     "compression": "^1.7.4",
-    "concurrently": "^7.3.0",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "csv-parser": "^3.0.0",
@@ -57,5 +35,8 @@
     "pdfkit": "^0.14.0",
     "streamifier": "^0.1.1",
     "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   }
 }
